@@ -1,4 +1,5 @@
 use anchor_lang::prelude::*;
+use std::str;
 
 pub use context::*;
 pub use error::*;
@@ -323,6 +324,8 @@ pub mod hello_world {
             received.batch_id = posted_message.batch_id();
             received.wormhole_message_hash = vaa_hash;
             received.message = message.clone();
+
+            msg!(str::from_utf8(message).unwrap());
 
             // Done
             Ok(())
