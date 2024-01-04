@@ -1,4 +1,4 @@
-use anchor_lang::{prelude::Pubkey, AnchorDeserialize, AnchorSerialize};
+use anchor_lang::{prelude::*, AnchorDeserialize, AnchorSerialize};
 use std::io;
 
 const PAYLOAD_ID_ALIVE: u8 = 0;
