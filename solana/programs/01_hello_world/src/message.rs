@@ -6,7 +6,7 @@ const PAYLOAD_ID_HELLO: u8 = 1;
 
 pub const HELLO_MESSAGE_MAX_LENGTH: usize = 512;
 
-#[derive(Clone)]
+#[derive(AnchorSerialize, AnchorDeserialize)]
 /// Expected message types for this program. Only valid payloads are:
 /// * `Alive`: Payload ID == 0. Emitted when [`initialize`](crate::initialize)
 ///  is called).
